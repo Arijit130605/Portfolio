@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arijit Mandal — CS & Engineering student. Developer Portfolio showcasing projects, skills, education and certifications.">
+    <title>Arijit Mandal | Developer Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tabler Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Particle Background Canvas -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">AM</a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">Profile</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#activities" class="nav-link">Activities</a>
+                <a href="#contact" class="nav-link btn-contact">Contact</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileBtn" aria-label="Toggle menu">
+                <i class="ti ti-menu-2"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <main>
+        <!-- ===================== HERO / PROFILE SECTION ===================== -->
+        <section id="hero" class="hero-section section">
+            <div class="container">
+                <div class="hero-layout reveal">
+                    <!-- Left: Text -->
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Arijit<br>
+                            <span class="gradient-text">Mandal</span>
+                        </h1>
+                        <div class="hero-role-wrapper">
+                            <span class="role-prefix">I am a </span>
+                            <span class="typed-text" id="typedText"></span>
+                            <span class="cursor-blink">|</span>
+                        </div>
+                        <p class="hero-desc">
+                            B.Tech CSE student at LPU with a strong background in C++, Data Structures, and Algorithms. I enjoy tackling complex problems and building efficient software solutions. Based in India 🇮🇳
+                        </p>
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn btn-primary">
+                                <i class="ti ti-briefcase"></i> View My Work
+                            </a>
+                            <a href="#contact" class="btn btn-outline">
+                                <i class="ti ti-send"></i> Hire Me
+                            </a>
+                            <a href="Arijit Mandal CV.pdf" download="Arijit_Mandal_CV.pdf" class="btn btn-cv">
+                                <i class="ti ti-download"></i> Download CV
+                            </a>
+                        </div>
+                        <div class="social-row">
+                            <a href="https://github.com/Arijit130605" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+                                <i class="ti ti-brand-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/arijit1306" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+                                <i class="ti ti-brand-linkedin"></i>
+                            </a>
+                            <a href="mailto:arijitmandal1306@gmail.com" aria-label="Email" class="social-icon">
+                                <i class="ti ti-mail"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Profile Photo -->
+                    <div class="hero-photo-side">
+                        <div class="photo-frame">
+                            <div class="photo-ring ring-1"></div>
+                            <div class="photo-ring ring-2"></div>
+                            <div class="photo-placeholder" id="photoPlaceholder">
+                                <input type="file" id="photoInput" accept="image/*" style="display:none">
+                                <img src="profile.jpeg" alt="Arijit Mandal" id="profileImg" class="profile-img">
+                            </div>
+                            <div class="photo-badge">
+                                <span class="badge-dot"></span> Available for work
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scroll Indicator -->
+                <div class="scroll-indicator">
+                    <span class="mono-text">scroll down</span>
+                    <div class="scroll-line"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== ABOUT / PROFILE DETAIL ===================== -->
+        <section id="about" class="about-section section">
+            <div class="container reveal">
+                <h2 class="section-title"><span class="section-num">01.</span> About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            I'm <strong class="accent-inline">Arijit Mandal</strong>, a Computer Science & Engineering student at 
+                            <strong class="accent-inline">Lovely Professional University</strong>, Phagwara, Punjab. 
+                            My core interest lies in <strong class="accent-inline">Software Development and Algorithms</strong> — efficiently solving problems and creating robust systems.
+                        </p>
+                        <p>
+                            With a strong foundation in <strong class="accent-inline">C++, C, and Python</strong>, I have solved over 400 algorithmic problems across various coding platforms. I enjoy building applications that implement core CS fundamentals such as networking, concurrency, and OOP.
+                        </p>
+                        <p>
+                            Outside of coding problems, I design and develop projects involving socket programming, encryption, and embedded systems. I'm highly adaptable and always eager to collaborate and innovate.
+                        </p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="ti ti-map-pin"></i>
+                                <span>Punjab, India</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="ti ti-school"></i>
+                                <span>B.Tech CSE | LPU</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="ti ti-mail"></i>
+                                <span>arijitmandal1306@gmail.com</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="ti ti-phone"></i>
+                                <span>+91-8463945142</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-num gradient-text">7.26</span>
+                            <span class="stat-label">Current CGPA</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num gradient-text">400+</span>
+                            <span class="stat-label">Problems Solved</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num gradient-text">3</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num gradient-text">3+</span>
+                            <span class="stat-label">Major Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== EDUCATION ===================== -->
+        <section id="education" class="education-section section">
+            <div class="container reveal">
+                <h2 class="section-title"><span class="section-num">02.</span> Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="ti ti-building-community"></i></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>B.Tech — Computer Science & Engineering</h3>
+                                    <h4>Lovely Professional University</h4>
+                                </div>
+                                <div class="timeline-badge">
+                                    <span class="badge-date">Aug 2023 – Present</span>
+                                    <span class="badge-score">CGPA: <strong>7.26</strong></span>
+                                </div>
+                            </div>
+                            <p class="timeline-desc">Strengthening foundations in Data Structures, Algorithms, OOP, Operating Systems, Computer Networks, and DBMS. Active in competitive programming and technical projects.</p>
+                            <ul class="timeline-tags">
+                                <li>DSA</li><li>OS</li><li>DBMS</li><li>CN</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="ti ti-school"></i></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>Intermediate</h3>
+                                    <h4>Sri Chaitanya Junior College, Hyderabad</h4>
+                                </div>
+                                <div class="timeline-badge">
+                                    <span class="badge-date">Jun 2021 – Apr 2023</span>
+                                    <span class="badge-score">91.2%</span>
+                                </div>
+                            </div>
+                            <p class="timeline-desc">Focused on analytical problem solving and logical reasoning.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon"><i class="ti ti-pencil"></i></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>Matriculation</h3>
+                                    <h4>Rau’s High School, Hyderabad</h4>
+                                </div>
+                                <div class="timeline-badge">
+                                    <span class="badge-date">Jun 2020 – Mar 2021</span>
+                                    <span class="badge-score">CGPA: 10.0</span>
+                                </div>
+                            </div>
+                            <p class="timeline-desc">Achieved academic excellence with consistent top performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SKILLS ===================== -->
+        <section id="skills" class="skills-section section">
+            <div class="container reveal">
+                <h2 class="section-title"><span class="section-num">03.</span> Skills & Tech</h2>
+                <div class="sk-domain-grid">
+
+                    <!-- Languages -->
+                    <div class="sk-domain-card">
+                        <div class="sk-domain-header">
+                            <div class="sk-domain-icon"><i class="ti ti-code"></i></div>
+                            <h3>Languages</h3>
+                        </div>
+                        <div class="sk-pills">
+                            <span class="sk-pill"><i class="ti ti-file-code"></i> C++</span>
+                            <span class="sk-pill"><i class="ti ti-file-code"></i> C</span>
+                            <span class="sk-pill"><i class="ti ti-brand-python"></i> Python</span>
+                        </div>
+                    </div>
+
+                    <!-- CS Fundamentals -->
+                    <div class="sk-domain-card">
+                        <div class="sk-domain-header">
+                            <div class="sk-domain-icon"><i class="ti ti-brain"></i></div>
+                            <h3>CS Fundamentals</h3>
+                        </div>
+                        <div class="sk-pills">
+                            <span class="sk-pill"><i class="ti ti-binary-tree"></i> Data Structures</span>
+                            <span class="sk-pill"><i class="ti ti-math"></i> Algorithms</span>
+                            <span class="sk-pill"><i class="ti ti-box"></i> OOP</span>
+                            <span class="sk-pill"><i class="ti ti-server"></i> Operating Systems</span>
+                            <span class="sk-pill"><i class="ti ti-network"></i> Computer Networks</span>
+                            <span class="sk-pill"><i class="ti ti-database"></i> DBMS</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="sk-domain-card">
+                        <div class="sk-domain-header">
+                            <div class="sk-domain-icon"><i class="ti ti-tools"></i></div>
+                            <h3>Tools & Platforms</h3>
+                        </div>
+                        <div class="sk-pills">
+                            <span class="sk-pill"><i class="ti ti-git-branch"></i> Git</span>
+                            <span class="sk-pill"><i class="ti ti-brand-github"></i> GitHub</span>
+                            <span class="sk-pill"><i class="ti ti-brand-windows"></i> Windows</span>
+                            <span class="sk-pill"><i class="ti ti-brand-ubuntu"></i> Linux</span>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="sk-domain-card">
+                        <div class="sk-domain-header">
+                            <div class="sk-domain-icon"><i class="ti ti-users"></i></div>
+                            <h3>Soft Skills</h3>
+                        </div>
+                        <div class="sk-pills">
+                            <span class="sk-pill"><i class="ti ti-user-check"></i> Team Player</span>
+                            <span class="sk-pill"><i class="ti ti-bulb"></i> Problem Solving</span>
+                            <span class="sk-pill"><i class="ti ti-refresh"></i> Adaptability</span>
+                            <span class="sk-pill"><i class="ti ti-clock"></i> Time Management</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== PROJECTS ===================== -->
+        <section id="projects" class="projects-section section">
+            <div class="container reveal">
+                <h2 class="section-title"><span class="section-num">04.</span> Featured Projects</h2>
+                <div class="projects-grid">
+
+                    <!-- Project 1 -->
+                    <div class="project-card tilt-card">
+                        <div class="project-card-top">
+                            <span class="project-number">01</span>
+                            <div class="project-links">
+                                <a href="https://github.com/Arijit130605" aria-label="GitHub" class="p-link" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-icon-wrap">
+                            <i class="ti ti-shield-lock"></i>
+                        </div>
+                        <h3 class="project-title">CipherLink – A Secure LAN Messenger</h3>
+                        <p class="project-date"><i class="ti ti-calendar"></i> Aug 2025 – Oct 2025</p>
+                        <p class="project-desc">
+                            Built a secure LAN messaging system enabling real-time multi-client communication using socket programming. Implemented AES encryption with HMAC verification and designed a multithreaded server with a custom protocol. Achieved secure large file transfer and concurrent broadcasting.
+                        </p>
+                        <ul class="project-stack">
+                            <li>C++</li><li>POSIX Sockets</li><li>OpenSSL</li><li>CMake</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card tilt-card">
+                        <div class="project-card-top">
+                            <span class="project-number">02</span>
+                            <div class="project-links">
+                                <a href="https://github.com/Arijit130605" aria-label="GitHub" class="p-link" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-icon-wrap">
+                            <i class="ti ti-radar"></i>
+                        </div>
+                        <h3 class="project-title">Radax – Ultrasonic Radar-Based Object Detection</h3>
+                        <p class="project-date"><i class="ti ti-calendar"></i> Nov 2024 – Dec 2024</p>
+                        <p class="project-desc">
+                            Designed an embedded object detection system using an HC-SR04 ultrasonic sensor interfaced with Arduino UNO. Calculated ultrasonic time-of-flight and programmed real-time monitoring with buzzer alerts, enabling accurate short-range object detection.
+                        </p>
+                        <ul class="project-stack">
+                            <li>C++</li><li>Arduino UNO</li><li>HC-SR04 Sensor</li><li>Arduino IDE</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card tilt-card">
+                        <div class="project-card-top">
+                            <span class="project-number">03</span>
+                            <div class="project-links">
+                                <a href="https://github.com/Arijit130605/AI-RESUME-BUILDER" aria-label="GitHub" class="p-link" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-icon-wrap">
+                            <i class="ti ti-file-certificate"></i>
+                        </div>
+                        <h3 class="project-title">AI Resume Builder</h3>
+                        <p class="project-date"><i class="ti ti-calendar"></i> Apr 2025</p>
+                        <p class="project-desc">
+                            An intelligent AI-powered resume builder web application designed to help users create professional, optimized resumes. Integrated frontend and backend logic to provide a dynamic and personalized layout.
+                        </p>
+                        <ul class="project-stack">
+                            <li>JavaScript</li><li>HTML/CSS</li><li>Python</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CERTIFICATIONS ===================== -->
+        <section id="certifications" class="certs-section section">
+    <div class="container reveal">
+        <h2 class="section-title"><span class="section-num">05.</span> Certifications</h2>
+        <div class="certs-grid">
+
+            <!-- Certificate 1 -->
+            <a href="https://drive.google.com/file/d/19pvnHYX47Ggt_edfWEVJbgE1okduY7IO/view" target="_blank" class="cert-card">
+                <div class="cert-icon-wrap">
+                    <i class="ti ti-shield-check"></i>
+                </div>
+                <div class="cert-body">
+                    <h3>Privacy and Security Online Social Media</h3>
+                    <p class="cert-issuer">NPTEL</p>
+                    <span class="cert-tag">Apr 2025</span>
+                </div>
+                <i class="ti ti-arrow-up-right cert-arrow"></i>
+            </a>
+
+            <!-- Certificate 2 -->
+            <a href="https://drive.google.com/file/d/1iK3ZZVJpd5jAXgHPzvcOyo_tCTMm7dZW/view" target="_blank" class="cert-card">
+                <div class="cert-icon-wrap">
+                    <i class="ti ti-network"></i>
+                </div>
+                <div class="cert-body">
+                    <h3>Computer Communications</h3>
+                    <p class="cert-issuer">Coursera</p>
+                    <span class="cert-tag">Nov 2024</span>
+                </div>
+                <i class="ti ti-arrow-up-right cert-arrow"></i>
+            </a>
+
+            <!-- Certificate 3 -->
+            <a href="https://drive.google.com/file/d/1SVXKwbyz3rjPuBLoONEpdIIn3CrLNOZE/view" target="_blank" class="cert-card">
+                <div class="cert-icon-wrap">
+                    <i class="ti ti-cpu"></i>
+                </div>
+                <div class="cert-body">
+                    <h3>Introduction to Hardware and Operating Systems</h3>
+                    <p class="cert-issuer">IBM (Coursera)</p>
+                    <span class="cert-tag">Sep 2024</span>
+                </div>
+                <i class="ti ti-arrow-up-right cert-arrow"></i>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+                    
+
+        <!-- ===================== TRAINING & CO-CURRICULAR ===================== -->
+<section id="activities" class="activities-section section">
+    <div class="container reveal">
+        <h2 class="section-title"><span class="section-num">06.</span> Training & Achievements</h2>
+        <div class="activities-grid">
+
+            <!-- Training -->
+            <div class="activity-col">
+                <h3 class="activity-col-title"><i class="ti ti-book"></i> Training</h3>
+                <div class="activity-list">
+
+                    <div class="activity-card">
+                        <a href="https://drive.google.com/file/d/1aXQnPdjm00I3P05bN_0nCfMFGMFVgDCE/view" target="_blank" class="activity-link">
+
+                            <div class="activity-icon">
+                                <i class="ti ti-device-laptop"></i>
+                            </div>
+
+                            <div class="activity-body">
+                                <h4>Data Structures and Algorithms using C++</h4>
+                                <p>LPU CPE | July 2025</p>
+                                <span class="activity-tag">Training</span>
+                            </div>
+
+                            <i class="ti ti-arrow-up-right cert-arrow"></i>
+
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="activity-col">
+                <h3 class="activity-col-title"><i class="ti ti-tournament"></i> Achievements</h3>
+                <div class="activity-list">
+                    <div class="activity-card highlight">
+                        <div class="activity-icon gold"><i class="ti ti-trophy"></i></div>
+                        <div class="activity-body">
+                            <h4>Solved 400+ Algorithmic Problems</h4>
+                            <p>Across various coding platforms</p>
+                            <span class="activity-tag gold-tag">Aug ’24 - Present</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <!-- ===================== CONTACT ===================== -->
+        <section id="contact" class="contact-section section">
+            <div class="container reveal">
+                <h2 class="section-title text-center"><span class="section-num">07.</span> Get In Touch</h2>
+                <div class="contact-wrapper">
+                    <!-- Contact Info Side -->
+                    <div class="contact-info-side">
+                        <h3>Let's build something together.</h3>
+                        <p>I'm currently open to internships, freelance projects, and full-time opportunities. Whether you have a question, a cool idea, or just want to say hi — my inbox is open!</p>
+                        <div class="contact-details">
+                            <a href="mailto:arijitmandal1306@gmail.com" class="contact-detail-item">
+                                <div class="cd-icon"><i class="ti ti-mail"></i></div>
+                                <div>
+                                    <span class="cd-label">Email</span>
+                                    <span class="cd-value">arijitmandal1306@gmail.com</span>
+                                </div>
+                            </a>
+                            <a href="tel:+918463945142" class="contact-detail-item">
+                                <div class="cd-icon"><i class="ti ti-phone"></i></div>
+                                <div>
+                                    <span class="cd-label">Phone</span>
+                                    <span class="cd-value">+91-8463945142</span>
+                                </div>
+                            </a>
+                            <div class="contact-detail-item">
+                                <div class="cd-icon"><i class="ti ti-map-pin"></i></div>
+                                <div>
+                                    <span class="cd-label">Location</span>
+                                    <span class="cd-value">Punjab, India</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-socials">
+                            <a href="https://github.com/Arijit130605" target="_blank" rel="noopener" class="contact-social-btn">
+                                <i class="ti ti-brand-github"></i> GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/arijit1306" target="_blank" rel="noopener" class="contact-social-btn">
+                                <i class="ti ti-brand-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Contact Form Side -->
+                    <div class="contact-form-side">
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="contactName">Your Name</label>
+                                <input type="text" id="contactName" placeholder="Alex Johnson" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address</label>
+                                <input type="email" id="contactEmail" placeholder="alex@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject">Subject</label>
+                                <input type="text" id="contactSubject" placeholder="Project Collaboration">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">Message</label>
+                                <textarea id="contactMessage" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                                <i class="ti ti-send"></i> Send Message
+                            </button>
+                            <div class="form-success" id="formSuccess">
+                                <i class="ti ti-circle-check"></i> Message sent! I'll get back to you soon.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <span class="logo">AM</span>
+                <p class="footer-copy">Designed & Built by <strong>Arijit Mandal</strong> · 2025</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/Arijit130605" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i></a>
+                    <a href="https://www.linkedin.com/in/arijit1306" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
